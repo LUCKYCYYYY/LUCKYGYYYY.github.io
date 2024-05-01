@@ -8,7 +8,7 @@
       <link href="/2024/05/01/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
       <url>/2024/05/01/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a><strong>集合</strong></h1><h1 id="关系"><a href="#关系" class="headerlink" title="关系"></a><strong>关系</strong></h1><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a><strong>函数</strong></h1><h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a><strong>图论</strong></h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul><li><p>n阶图：有n个结点的图</p></li><li><p>(n, m)图：n个结点m条边    </p><p>(n, 0)图：零图     </p><p>(1, 0)图：平凡图</p></li><li><p>完全图：任意两个不同结点都相邻接的图叫完全图  </p><p>补图：由G所有节点和为了使G变成完全图添加的边构成的图</p></li><li><p>d次正则图：所有节点都具有同一度d</p></li><li><p>子图：$\widetilde{V}$   $\subset$  $V$, $\widetilde{E}$  $\subset$ $E$           </p><p>真子图：$\widetilde{V}$   $\subset$  $V$, $\widetilde{E}$  $\subset$ $E$ , 且 $\widetilde{E}$  $\neq$ $E$              </p><p> 生成子图：$\widetilde{V}$ $&#x3D;$ $V$ , $\widetilde{E}$  $\subset$ $E$</p></li><li><p>图的同构：两个图存在边与边之间的双射关系</p></li><li><p>伪图：设 $G &#x3D; (V, E)$ , V是一个有限非空集合，E是V中任意元素的非有序对偶的多重集</p><ul><li>在E中允许出现相同元素的对偶</li><li>在E中无序对偶{${Vi, Vj}$}可能出现r次</li></ul></li><li><p>多重图：  没有长度为1的环的伪图</p><p>简单图：没有自环且没有重数大于1的边 </p></li><li><p>邻接（结点与结点，边与边）、关联（结点与边）、孤立点、孤立边</p></li></ul><h3 id="各性质定理"><a href="#各性质定理" class="headerlink" title="各性质定理"></a>各性质定理</h3><ul><li>握手定理—-在(n, m)图中，$\sum\limits_{i&#x3D;1}^{n}$deg($vi$)$&#x3D;2m$​;</li><li>n阶完全图$Kn$中，m$&#x3D;$$$\frac{1}{2}$$​​​n(n-1);</li><li>两个图同构的必要条件：<ol><li>它们有相同的结点数和相同的边数</li><li></li></ol></li></ul><h2 id="路"><a href="#路" class="headerlink" title="路"></a>路</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><ul><li>开路、真路、回路、环<ul><li>没有重复结点的开路是真路</li><li>没有重复结点的回路是环</li></ul></li><li>短程、距离</li></ul><h3 id="各性质定理-1"><a href="#各性质定理-1" class="headerlink" title="各性质定理"></a>各性质定理</h3><p>- </p><h2 id="图的矩阵表示"><a href="#图的矩阵表示" class="headerlink" title="图的矩阵表示"></a>图的矩阵表示</h2><h2 id="图的连通性"><a href="#图的连通性" class="headerlink" title="图的连通性"></a>图的连通性</h2><h2 id="欧拉图"><a href="#欧拉图" class="headerlink" title="欧拉图"></a>欧拉图</h2><h2 id="哈密顿图"><a href="#哈密顿图" class="headerlink" title="哈密顿图"></a>哈密顿图</h2><h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h2 id="二部图"><a href="#二部图" class="headerlink" title="二部图"></a>二部图</h2><h2 id="平面图"><a href="#平面图" class="headerlink" title="平面图"></a>平面图</h2>]]></content>
       
       
       <categories>
@@ -31,7 +31,7 @@
     
     
     <entry>
-      <title>algorithm</title>
+      <title>算法--图论</title>
       <link href="/2024/04/30/algorithm/"/>
       <url>/2024/04/30/algorithm/</url>
       
@@ -41,6 +41,8 @@
       <categories>
           
           <category> 算法 </category>
+          
+          <category> 图论 </category>
           
       </categories>
       
