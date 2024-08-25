@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AcWing动态规划提高版 | 眨眼的小星星</title><meta name="author" content="摘星的小月亮"><meta name="copyright" content="摘星的小月亮"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="AcWing中的动态规划的实际应用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AcWing动态规划提高版">
+<meta property="og:url" content="http://www.luckycyyyy.top/2024/08/25/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%8F%90%E9%AB%98%E7%89%88/index.html">
+<meta property="og:site_name" content="眨眼的小星星">
+<meta property="og:description" content="AcWing中的动态规划的实际应用">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053083.jpg">
+<meta property="article:published_time" content="2024-08-25T03:04:11.000Z">
+<meta property="article:modified_time" content="2024-08-25T06:33:53.982Z">
+<meta property="article:author" content="摘星的小月亮">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053083.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://www.luckycyyyy.top/2024/08/25/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%8F%90%E9%AB%98%E7%89%88/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AcWing动态规划提高版',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-25 14:33:53'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053083.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="眨眼的小星星"><span class="site-name">眨眼的小星星</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">AcWing动态规划提高版</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-25T03:04:11.000Z" title="发表于 2024-08-25 11:04:11">2024-08-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-25T06:33:53.982Z" title="更新于 2024-08-25 14:33:53">2024-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">862</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="AcWing动态规划提高版"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="数字三角形模型">数字三角形模型</h1>
+<h2 id="方格取数">方格取数</h2>
+<p><img
+src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408251124285.png" /></p>
+<blockquote>
+<p>分析：</p>
+<ol type="1">
+<li><p>因为要走两次，并且走之后会重新更新为0，所以让两个同时走</p></li>
+<li><p>如果要同时走，就需要四维，如何优化呢？根据观察，因为两者同时走，所以走的步数是一样的，即<span
+class="math inline">\(i1+j1=i2+j2\)</span>，所以可以设置一维是<span
+class="math inline">\(k,k=i1+j1=i2+j2\)</span>，就优化成了三维</p></li>
+<li><p>通过判断<span class="math inline">\(i1\)</span>是否等于<span
+class="math inline">\(i2\)</span>，决定最终要加几次权重</p></li>
+<li><p>因为<span
+class="math inline">\(i1,i2\)</span>都有可能从上或者左来，所以一共有4种状态</p></li>
+<li><p>状态计算：<span
+class="math inline">\(f(k,i1,i2)=max(f(k-1,i1-1,i2-1),f(k-1,i1-1,i2),f(k-1,i1,i2-1),f(k-1,i1,i2))+w[i][j]\)</span></p>
+<p>（依次表示都从上，i1从上i2从左，i1从左i2从上，都从左）</p></li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">15</span>;</span><br><span class="line"><span class="type">int</span> f[<span class="number">2</span> * N][N][N], g[N][N];</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> x, y, z;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; x &gt;&gt; y &gt;&gt; z, x | y | z) g[x][y] = z;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">2</span>; k &lt;= <span class="number">2</span> * n; k++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i1 = <span class="number">1</span>; i1 &lt;= n; i1++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i2 = <span class="number">1</span>; i2 &lt;= n; i2++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> j1 = k - i1, j2 = k - i2;</span><br><span class="line">                <span class="keyword">if</span>(j1 &gt;= <span class="number">1</span> &amp;&amp; j1 &lt;= n &amp;&amp; j2 &gt;= <span class="number">1</span> &amp;&amp; j2 &lt;= n)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="type">int</span> &amp;x = f[k][i1][i2];</span><br><span class="line">                    <span class="type">int</span> t = g[i1][j1];</span><br><span class="line">                    <span class="keyword">if</span>(i1 != i2) t += g[i2][j2];</span><br><span class="line">                    x = <span class="built_in">max</span>(x, f[k - <span class="number">1</span>][i1 - <span class="number">1</span>][i2 - <span class="number">1</span>] + t);</span><br><span class="line">                    x = <span class="built_in">max</span>(x, f[k - <span class="number">1</span>][i1][i2 - <span class="number">1</span>] + t);</span><br><span class="line">                    x = <span class="built_in">max</span>(x, f[k - <span class="number">1</span>][i1 - <span class="number">1</span>][i2] + t);</span><br><span class="line">                    x = <span class="built_in">max</span>(x, f[k - <span class="number">1</span>][i1][i2] + t);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; f[<span class="number">2</span> * n][n][n];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="传纸条">传纸条</h2>
+<p><img
+src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408251311381.png" /></p>
+<blockquote>
+<p>方格取数是同向一起走，传纸条是相向先后走，为什么所用的代码是一样的呢？</p>
+</blockquote>
+<p>~<img
+src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408251314715.png" /></p>
+<blockquote>
+<p>既然答案中的i1一定不等于i2，为什么代码中还要写出来呢？</p>
+<p>因为不想交的线是由相交的线得到的，所以相交的线是构成最优的必须过程</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">60</span>;</span><br><span class="line"><span class="type">int</span> f[<span class="number">2</span> * N][N][N], g[N][N];</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            cin &gt;&gt; g[i][j];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">2</span>; k &lt;= n + m; k++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i1 = <span class="number">1</span>; i1 &lt;= m; i1++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i2 = <span class="number">1</span>; i2 &lt;= m; i2++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> j1 = k - i1, j2 = k - i2;</span><br><span class="line">                <span class="keyword">if</span>(j1 &gt;= <span class="number">1</span> &amp;&amp; j1 &lt;= n &amp;&amp; j2 &gt;= <span class="number">1</span> &amp;&amp; j2 &lt;= n)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="type">int</span> &amp;x = f[k][i1][i2];</span><br><span class="line">                    <span class="type">int</span> t = g[i1][j1];</span><br><span class="line">                    <span class="keyword">if</span>(i1 != i2) t += g[i2][j2];</span><br><span class="line">                    x = <span class="built_in">max</span>(x, f[k - <span class="number">1</span>][i1 - <span class="number">1</span>][i2 - <span class="number">1</span>] + t);</span><br><span class="line">                    x = <span class="built_in">max</span>(x, f[k - <span class="number">1</span>][i1][i2 - <span class="number">1</span>] + t);</span><br><span class="line">                    x = <span class="built_in">max</span>(x, f[k - <span class="number">1</span>][i1 - <span class="number">1</span>][i2] + t);</span><br><span class="line">                    x = <span class="built_in">max</span>(x, f[k - <span class="number">1</span>][i1][i2] + t);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; f[m + n][m][m];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="最长上升子序列">最长上升子序列</h1>
+<h2 id="合唱队形">合唱队形</h2>
+<figure>
+<img
+src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408251432948.png"
+alt="image-20240825143237926" />
+<figcaption aria-hidden="true">image-20240825143237926</figcaption>
+</figure>
+<blockquote>
+<p>分两步：先求以每个节点为结尾的最长上升子序列，再求以每个节点开始的最长下降子序列；最后相加即可</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">110</span>;</span><br><span class="line"><span class="type">int</span> h[N], f[N], uf[N];</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cin &gt;&gt; h[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        f[i] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            <span class="keyword">if</span>(h[j] &lt; h[i]) f[i] = <span class="built_in">max</span>(f[i], f[j] + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = n; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        uf[i] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = n; j &gt; i; j--)</span><br><span class="line">            <span class="keyword">if</span>(h[j] &lt; h[i]) uf[i] = <span class="built_in">max</span>(uf[i], uf[j] + <span class="number">1</span>); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) ans = <span class="built_in">max</span>(ans, f[i] + uf[i] - <span class="number">1</span>);</span><br><span class="line">    cout &lt;&lt; n - ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://www.luckycyyyy.top">摘星的小月亮</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://www.luckycyyyy.top/2024/08/25/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%8F%90%E9%AB%98%E7%89%88/">http://www.luckycyyyy.top/2024/08/25/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%8F%90%E9%AB%98%E7%89%88/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.luckycyyyy.top" target="_blank">眨眼的小星星</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053083.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/08/20/STL%E4%B9%8Bbound/" title="STL之bound"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053085.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">STL之bound</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/08/19/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%A8%A1%E7%89%88%E9%A2%98/" title="AcWing动态规划模版题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053082.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-19</div><div class="title">AcWing动态规划模版题</div></div></a></div><div><a href="/2024/08/15/AcWing%E5%9B%BE%E8%AE%BA%E6%8F%90%E9%AB%98%E7%89%88/" title="AcWing图论提高版"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408122258501.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-15</div><div class="title">AcWing图论提高版</div></div></a></div><div><a href="/2024/07/24/AcWing%E5%9B%BE%E8%AE%BA%E9%A2%98%E8%A7%A3/" title="AcWing图论题解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202407022357243.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-24</div><div class="title">AcWing图论题解</div></div></a></div><div><a href="/2024/07/01/AcWing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/" title="AcWing基础算法题解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202406051507119.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-01</div><div class="title">AcWing基础算法题解</div></div></a></div><div><a href="/2024/07/24/AcWing%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E9%A2%98%E8%A7%A3/" title="AcWing数学知识题解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202406071649147.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-24</div><div class="title">AcWing数学知识题解</div></div></a></div><div><a href="/2024/07/02/AcWing%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%98%E8%A7%A3/" title="AcWing数据结构题解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202406071649904.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-02</div><div class="title">AcWing数据结构题解</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="avatar"/></div><div class="author-info__name">摘星的小月亮</div><div class="author-info__description">记录每一天的美好</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://luckycyyyy.github.io/"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">数字三角形模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">方格取数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E7%BA%B8%E6%9D%A1"><span class="toc-number">1.2.</span> <span class="toc-text">传纸条</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97"><span class="toc-number">2.</span> <span class="toc-text">最长上升子序列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%88%E5%94%B1%E9%98%9F%E5%BD%A2"><span class="toc-number">2.1.</span> <span class="toc-text">合唱队形</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/25/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%8F%90%E9%AB%98%E7%89%88/" title="AcWing动态规划提高版"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053083.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="AcWing动态规划提高版"/></a><div class="content"><a class="title" href="/2024/08/25/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%8F%90%E9%AB%98%E7%89%88/" title="AcWing动态规划提高版">AcWing动态规划提高版</a><time datetime="2024-08-25T03:04:11.000Z" title="发表于 2024-08-25 11:04:11">2024-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/20/STL%E4%B9%8Bbound/" title="STL之bound"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053085.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="STL之bound"/></a><div class="content"><a class="title" href="/2024/08/20/STL%E4%B9%8Bbound/" title="STL之bound">STL之bound</a><time datetime="2024-08-20T02:14:26.000Z" title="发表于 2024-08-20 10:14:26">2024-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/19/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="背包问题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053087.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="背包问题"/></a><div class="content"><a class="title" href="/2024/08/19/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="背包问题">背包问题</a><time datetime="2024-08-19T03:22:25.000Z" title="发表于 2024-08-19 11:22:25">2024-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/19/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%A8%A1%E7%89%88%E9%A2%98/" title="AcWing动态规划模版题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053082.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="AcWing动态规划模版题"/></a><div class="content"><a class="title" href="/2024/08/19/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%A8%A1%E7%89%88%E9%A2%98/" title="AcWing动态规划模版题">AcWing动态规划模版题</a><time datetime="2024-08-19T02:47:22.000Z" title="发表于 2024-08-19 10:47:22">2024-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/17/CMC%E6%9E%81%E9%99%90/" title="CMC极限"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408122258997.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="CMC极限"/></a><div class="content"><a class="title" href="/2024/08/17/CMC%E6%9E%81%E9%99%90/" title="CMC极限">CMC极限</a><time datetime="2024-08-17T06:42:15.000Z" title="发表于 2024-08-17 14:42:15">2024-08-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053083.jpg')"><div id="footer-wrap"><div class="footer_custom_text"><span id="realtime_duration"></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.7/dayjs.min.js"></script><script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.7/plugin/duration.min.js"></script><script src="/scripts/realtime.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
