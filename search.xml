@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>CMC中值问题与微分应用</title>
+      <link href="/2024/09/02/CMC%E4%B8%AD%E5%80%BC%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BE%AE%E5%88%86%E5%BA%94%E7%94%A8/"/>
+      <url>/2024/09/02/CMC%E4%B8%AD%E5%80%BC%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BE%AE%E5%88%86%E5%BA%94%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="中值问题">中值问题</h1><h2 id="单中值问题">单中值问题</h2><blockquote><p>利用微分方程 + 罗尔定理</p></blockquote><p><spanclass="math display">\[化成形式：f&#39;(x)+P(x)f(x)=Q(x)\]</span></p><p><span class="math display">\[辅助函数：F(x)=f(x)e^{\int P(x)dx}-\intQ(x)e^{\int P(x)dx}\]</span></p><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021634572.jpg" /></p><blockquote><p>利用介值定理，凹凸性进行放缩判断范围</p></blockquote><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021634757.jpg" /></p><h2 id="双中值问题">双中值问题</h2><blockquote><p>观察法，凑出辅助函数</p></blockquote><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021634672.jpg" /></p><blockquote><p>设置双函数，运用拉格朗日中值定理</p></blockquote><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021634158.jpg" /></p><blockquote><p>利用微分中值定理的几何性质进行分析，大胆假设</p></blockquote><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021634018.jpg" /></p><h2 id="利用泰勒展开">利用泰勒展开</h2><blockquote><p>出现二阶及以上的项，考虑用泰勒展开</p></blockquote><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021636140.jpg" /></p><h2 id="三中值问题">三中值问题</h2><blockquote><p>运用两次中值定理</p></blockquote><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021634750.jpg" /></p><h1 id="不等式问题">不等式问题</h1><h2 id="凹凸性">凹凸性</h2><p><span class="math display">\[连续：凸函数\LeftrightarrowJensen不等式，f(\sum\limits_{k=1}^{n}t_kx_k)\leq\sum\limits_{k=1}^{n}t_kf(x_k)\]</span></p><p><span class="math display">\[一阶可导：凸函数\Leftrightarrowf(x_2)\geq f(x_1)+f&#39;(x_1)(x_2-x_1)\]</span></p><p><span class="math display">\[二阶可导：凸函数\Leftrightarrowf&#39;&#39;(x)\geq 0\]</span></p><h2 id="泰勒展开">泰勒展开</h2><p>题目给了范围<spanclass="math inline">\([a,b]\)</span>：（根据已知哪一点的导数进行选择）</p><p><spanclass="math display">\[f(x)=f(a)+f&#39;(a)(x-a)+\frac{1}{2}f&#39;&#39;(a)(x-1)^2+...\]</span></p><p><spanclass="math display">\[f(x)=f(b)+f&#39;(b)(x-b)+\frac{1}{2}f&#39;&#39;(b)(x-b)^2+...\]</span></p><p><spanclass="math display">\[f(a)=f(x)+f&#39;(x)(a-x)+\frac{1}{2}f&#39;&#39;(x)(a-x)^2+...\]</span></p><p><spanclass="math display">\[f(b)=f(x)+f&#39;(x)(b-x)+\frac{1}{2}f&#39;&#39;(x)(b-x)^2+...\]</span></p><p>题目未给范围或范围为<span class="math inline">\(\infty\)</span>：</p><p><spanclass="math display">\[f(x+h)=f(x)+f&#39;(x)h+\frac{1}{2}f&#39;&#39;(x)h^2+...\]</span></p><p><spanclass="math display">\[f(x-h)=f(x)-f&#39;(x)h+\frac{1}{2}f&#39;&#39;(x)h^2+...\]</span></p><h1 id="函数性态与方程的根">函数性态与方程的根</h1><blockquote><p>充分利用极值点、最值点的导数性质</p></blockquote><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021634872.jpg" /></p><blockquote><p>以方程的根的形式表示函数</p></blockquote><p><imgsrc="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202409021635112.jpg" /></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数学 </category>
+          
+          <category> 微积分 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微分中值定理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>并查集</title>
       <link href="/2024/09/02/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
       <url>/2024/09/02/%E5%B9%B6%E6%9F%A5%E9%9B%86/</url>
