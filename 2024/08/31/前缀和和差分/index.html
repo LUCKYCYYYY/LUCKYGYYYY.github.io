@@ -153,60 +153,37 @@
         }
       }
       detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">27</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053084.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="眨眼的小星星"><span class="site-name">眨眼的小星星</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">前缀和和差分</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-31T04:20:15.000Z" title="发表于 2024-08-31 12:20:15">2024-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-01T11:36:30.226Z" title="更新于 2024-09-01 19:36:30">2024-09-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80/">基础</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">580</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="前缀和和差分"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前缀和">前缀和</h1>
-<p><strong>一维前缀和：</strong></p>
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">27</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408191053084.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="眨眼的小星星"><span class="site-name">眨眼的小星星</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">前缀和和差分</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-31T04:20:15.000Z" title="发表于 2024-08-31 12:20:15">2024-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-01T11:36:30.226Z" title="更新于 2024-09-01 19:36:30">2024-09-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80/">基础</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">580</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="前缀和和差分"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h1><p><strong>一维前缀和：</strong></p>
 <p><code>s[i] = s[i - 1] + a[i]</code></p>
-<p>数列a中任意<span class="math inline">\(\text [l,
-r]\)</span>的和为<code>s[r] - s[l - 1]</code></p>
+<p>数列a中任意$\text [l, r]$的和为<code>s[r] - s[l - 1]</code></p>
 <p><strong>二维前缀和：</strong></p>
 <p><code>s[i][j] = s[i - 1][j] + s[i][j - 1] - s[i - 1][j - 1] + a[i][j]</code></p>
-<p>求以<span class="math inline">\(\text (x1,
-y1)\)</span>为左上角，<span class="math inline">\(\text (x2,
-y2)\)</span>为右下角的子矩阵元素和<code>s[x2][y2] - s[x1 - 1][y2] - s[x2][y1 - 1] + s[x1 - 1][y1 - 1]</code></p>
-<h1 id="差分">差分</h1>
-<blockquote>
+<p>求以$\text (x1, y1)$为左上角，$\text (x2, y2)$为右下角的子矩阵元素和<code>s[x2][y2] - s[x1 - 1][y2] - s[x2][y1 - 1] + s[x1 - 1][y1 - 1]</code></p>
+<h1 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h1><blockquote>
 <p>差分序列的前缀和序列就是原序列，利用差分数组将“区间操作”变成“单点操作”</p>
 </blockquote>
 <p><strong>一维差分数组：</strong></p>
 <p><code>dp[i] = a[i] - a[i - 1]</code></p>
-<p>把a数组的[l,
-r]上的每个数加上c，则<code>dp[l] += c, dp[r + 1] -= c;</code></p>
+<p>把a数组的[l, r]上的每个数加上c，则<code>dp[l] += c, dp[r + 1] -= c;</code></p>
 <p>对差分数组求前缀和<code>a[i] = dp[i] + a[i - 1]</code></p>
 <p><strong>二维差分数组：</strong></p>
 <p><code>dp[i][j] = a[i][j] - a[i - 1][j] - a[i][j - 1] + a[i - 1][j - 1]</code></p>
-<p>把矩阵中左上角为<span class="math inline">\(\text
-a[x1][y1]\)</span>右下角为<span class="math inline">\(\text
-a[x2][y2]\)</span>的小矩形中每个元素加上c，则</p>
+<p>把矩阵中左上角为$\text a[x1][y1]$右下角为$\text a[x2][y2]$的小矩形中每个元素加上c，则</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dp[x1][y1] += c;</span><br><span class="line">dp[x1][y2 + <span class="number">1</span>] -= c;</span><br><span class="line">dp[x2 + <span class="number">1</span>][y1] -= c;</span><br><span class="line">dp[x2 + <span class="number">1</span>][y2 + <span class="number">1</span>] += c;</span><br></pre></td></tr></table></figure>
 <p>对差分矩阵求前缀和得原矩阵</p>
 <p>即<code>a[i][j] = dp[i][j] + dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1]</code></p>
-<h1 id="应用">应用</h1>
-<p><img
-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408311357754.png" /></p>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/LUCKYCYYYY/PictureBed/master/img/202408311357754.png" alt=""></p>
 <blockquote>
-<ol type="1">
-<li>利用差分，相当求让差分数组d，从<span
-class="math inline">\(d[2]\)</span>到<span
-class="math inline">\(d[n]\)</span>全部为0的最少步数</li>
-<li>从<span class="math inline">\(i\)</span>到<span
-class="math inline">\(j\)</span>进行加c的操作共有三种情况
-<ol type="1">
-<li><span class="math inline">\(2\leq i,j\leq n\)</span>，那么<span
-class="math inline">\(d[i]+=c,d[j+1]-=c\)</span></li>
-<li><span class="math inline">\(i=1,2\leq j\leq n\)</span>，那么<span
-class="math inline">\(d[j+1]-=c\)</span></li>
-<li><span class="math inline">\(2\leq i&lt;n,j=n+1\)</span>，那么<span
-class="math inline">\(d[i]+=c\)</span></li>
-</ol></li>
-<li>求出从<span class="math inline">\(d[2]\)</span>到<span
-class="math inline">\(d[n]\)</span>中正数的和a以及负数的和b，共可以进行<span
-class="math inline">\(min(a,b)\)</span>次的1操作，剩余的<span
-class="math inline">\(|a-b|\)</span>次可以进行2/3操作</li>
-<li>因为队列的情况等价于求<span
-class="math inline">\(d[1]\)</span>有多少中情况，那么根据2/3的操作，可以让<span
-class="math inline">\(b[1]\)</span>加/减0,1,2，……，<span
-class="math inline">\(|a-b|\)</span>共<span
-class="math inline">\(|a-b|+1\)</span>种情况</li>
+<ol>
+<li>利用差分，相当求让差分数组d，从$d[2]$到$d[n]$全部为0的最少步数</li>
+<li>从$i$到$j$进行加c的操作共有三种情况<ol>
+<li>$2\leq i,j\leq n$，那么$d[i]+=c,d[j+1]-=c$</li>
+<li>$i=1,2\leq j\leq n$，那么$d[j+1]-=c$</li>
+<li>$2\leq i&lt;n,j=n+1$，那么$d[i]+=c$</li>
+</ol>
+</li>
+<li>求出从$d[2]$到$d[n]$中正数的和a以及负数的和b，共可以进行$min(a,b)$次的1操作，剩余的$|a-b|$次可以进行2/3操作</li>
+<li>因为队列的情况等价于求$d[1]$有多少中情况，那么根据2/3的操作，可以让$b[1]$加/减0,1,2，……，$|a-b|$共$|a-b|+1$种情况</li>
 </ol>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line">ll a[N], d[N];</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cin &gt;&gt; a[i], d[i] = a[i] - a[i - <span class="number">1</span>];</span><br><span class="line">    ll a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">if</span>(d[i] &lt; <span class="number">0</span>) a -= d[i];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(d[i] &gt; <span class="number">0</span>) b += d[i];</span><br><span class="line">    cout &lt;&lt; <span class="built_in">min</span>(a, b) + <span class="built_in">abs</span>(a - b) &lt;&lt; <span class="string">&#x27;\n&#x27;</span> &lt;&lt; <span class="built_in">abs</span>(a - b) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
